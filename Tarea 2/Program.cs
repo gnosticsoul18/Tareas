@@ -139,7 +139,30 @@ namespace Tarea_2
         }
         public static void Ejercicio3()
         {
-
+            // se declaran las variables
+            int cantidad = 0;int precio = 0; int total = 0;
+            
+            
+            // Leer la cantidad de artículos comprados
+            Console.WriteLine("Ingrese la cantidad de artículos comprados:");
+            cantidad = int.Parse(Console.ReadLine());
+            
+            // Determinar el precio por artículo
+            if (cantidad <= 10)
+            {
+                precio = 20; // Precio por artículo si se compran 10 o menos
+            }
+            else
+            {
+                precio = 15; // Precio por artículo si se compran más de 10
+            }
+            
+            // Calcular el total
+            total = cantidad * precio;
+            
+            // Mostrar resultados
+            Console.WriteLine($"Precio por artículo: ${precio}");
+            Console.WriteLine($"Total a pagar: ${total}");    
         }
     }
 }
